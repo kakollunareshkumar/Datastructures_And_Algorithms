@@ -1,3 +1,5 @@
+package binary_search;
+
 import java.util.Scanner;
 
 public class Binary_Search_Using_Recursion {
