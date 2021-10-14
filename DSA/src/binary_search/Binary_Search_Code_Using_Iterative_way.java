@@ -78,3 +78,5 @@ public class Binary_Search_Code_Using_Iterative_way {
 //Time complexity
 //Best case--O(1) when element is found at middle position
 //Worst case -- O(logn) -- when element is found at right or left half of the arrays
+
+//Space complexity -  O(1)

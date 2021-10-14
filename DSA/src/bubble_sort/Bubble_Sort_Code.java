@@ -40,4 +40,6 @@ Best case: According to our logic best case when elements are in sorted oder and
 Worst case: When elements are in descending order then (n-1)*(n-1) comparisions are made and O(n^2) is complexity
 Average case:When some elements are in sorted order and some elements are in descending order then only half comparisions are made
             :(n-1)*(n-1)/2 =>O(n^2)
+
+space complexity: O(1)
  */
