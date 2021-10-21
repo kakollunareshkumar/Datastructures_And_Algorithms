@@ -1,3 +1,5 @@
+package linear_search;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
