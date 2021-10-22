@@ -1,0 +1,20 @@
+2.1. Arrays v/s Singly Linked List ?
+You must be wondering why do we need another data structure when we already have a powerful data structure Arrays,
+easy to create and simple to use. Let’s discuss some limitations of arrays and how a Linked List overcomes these limitations.
+
+2.1.1. Limitations Of Arrays
+Fixed Size: Array elements are stored in contiguous memory locations.
+As a result, the size of the array needs to be known in advance at the time of its creation, and predicting this size can be a challenging task.
+Also, once created, the size of the array cannot be modified and declaring a large-sized array could result in a wastage of memory if we do not end up storing that many elements.
+
+Performance: Since the size of the array cannot be modified dynamically, adding a new element to an array is another expensive operation.
+This involves allocating a location in the memory with the size of the new array, copying the elements of the old array to the new location, and finally adding the new element.
+Similarly deleting an element from an array is an expensive operation as all the elements after the deleted element must be shifted left.
+
+2.1.2. Linked Lists – A solution
+Dynamic Memory Allocation: As Linked Lists do not need contiguous memory locations to store their elements, memory is allocated dynamically at runtime whenever a new node is created.
+Therefore, knowing and predicting the size of the linked list in advance is not a necessary requirement.
+
+Performance: Adding an element to a linked list does not require copying the list to a new memory location.
+Similarly, deleting an element does not require shifting of elements to the left.
+However, the previous node needs to be updated with the pointer/reference of the next correct node in the memory.
