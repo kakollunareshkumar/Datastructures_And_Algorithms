@@ -1,6 +1,4 @@
-package linked_list;
-
-import java.util.*;
+package linked_list.single_linked_list;
 
 // we will create a node class first with data members
 class Node
