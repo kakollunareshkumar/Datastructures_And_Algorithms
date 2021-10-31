@@ -2,7 +2,7 @@ package merge_sort;
 
 public class Merge_Sort_Code {
 
-    static  int  arr[]={100,20,15,30,5,75,40};
+    static  int  arr[]={40,-1,20,60,37,-5,0};
 
     public static void main(String args[])
     {
@@ -37,47 +37,62 @@ public class Merge_Sort_Code {
 
     }
 
-    private static void merge(int start, int mid, int end) {
-        // Initializing temp array and index
-        int[] tempArray=new int[arr.length];
-        int tempArrayIndex=start;
+    private static void merge(int lb, int mid, int ub) {
+        // Initializing one temp array of length equal to initial array arr[]
+        int[] barr=new int[arr.length];
+        int i = lb;
+        int j = mid+1;
+        int k =lb;
 
         System.out.print("Before Merging:  ");
-        printArray(arr,start,end);
-
-        int startIndex=start;
-        int midIndex=mid+1;
+        printArray(arr,lb,ub);
 
         // It will iterate until smaller list reaches to the end
-        while(startIndex<=mid && midIndex<=end)
+        while(i<=mid && j<=ub)
         {
-            if(arr[startIndex]< arr[midIndex])
+            if(arr[i]<=arr[j])
             {
-                tempArray[tempArrayIndex++]=arr[startIndex++];
+                barr[k]=arr[i];
+                i++;
             }
             else
             {
-                tempArray[tempArrayIndex++]=arr[midIndex++];
+                barr[k]=arr[j];
+                j++;
             }
+            k++;
         }
 
         // Copy remaining elements
-        while(startIndex<=mid)
+
+        if(i>mid)
+
         {
-            tempArray[tempArrayIndex++]=arr[startIndex++];
+            while (j<=ub)
+
+            {
+                barr[k]=arr[j];
+                j++;
+                k++;
+            }
+
         }
-        while(midIndex<=end)
-        {
-            tempArray[tempArrayIndex++]=arr[midIndex++];
+        else {
+            while (i<=mid){
+                barr[k]=arr[i];
+                i++;
+                k++;
+
+            }
         }
 
-        // Copy tempArray to actual array after sorting
-        for (int i = start; i <=end; i++) {
-            arr[i]=tempArray[i];
+        // Copy tempArray elements to actual array after merge sort operation
+        for (int m = lb; m <=ub; m++) {
+            arr[m]=barr[m];
         }
 
         System.out.print("After merging:   ");
-        printArray(tempArray,start,end);
+        printArray(barr,lb,ub);
         System.out.println();
     }
 
