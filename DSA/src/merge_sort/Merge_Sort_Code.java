@@ -9,29 +9,29 @@ public class Merge_Sort_Code {
         // Print array before merge sort
         System.out.println("Array before sorting:");
         printArray(arr,0,arr.length-1);
-        System.out.println("-----------------------------");
+        System.out.println("=================================");
 
         mergeSort(0,arr.length-1);
 
-        System.out.println("-----------------------------");
+        System.out.println("==================================");
 
-        // Print array after sorting
+        // Print array after merge sorting
         System.out.println("Array After sorting:");
         printArray(arr,0,arr.length-1);
 
     }
 
-    // Recursive algorithm for merge sort
+    // Recursive algorithm for merge sort to divide array in to two equal halves until we reach a single element array
     public static void mergeSort(int start,int end)
     {
         int mid=(start+end)/2;
         if(start<end)
         {
-            // Sort left half
+            // Sort left half of the array
             mergeSort(start,mid);
-            // Sort right half
+            // Sort right half of the array
             mergeSort(mid+1,end);
-            // Merge left and right half
+            // Merge left and right half of the array
             merge(start,mid,end);
         }
 
@@ -44,7 +44,7 @@ public class Merge_Sort_Code {
         int j = mid+1;
         int k =lb;
 
-        System.out.print("Before Merging:  ");
+        System.out.print("Before Merging  array elements:  ");
         printArray(arr,lb,ub);
 
         // It will iterate until smaller list reaches to the end
@@ -91,7 +91,7 @@ public class Merge_Sort_Code {
             arr[m]=barr[m];
         }
 
-        System.out.print("After merging:   ");
+        System.out.print("After merging elements in array:   ");
         printArray(barr,lb,ub);
         System.out.println();
     }
